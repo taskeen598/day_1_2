@@ -9,6 +9,11 @@ const port = 1126;
 
 // * Automatically parse incoming JSON to an object so we access it in our request handlers
 app.use(express.json())
+app.get("/",(req,res)=>{
+  res.status(200).json({
+    msg:"Chaaaaaa"
+  })
+})
 
 app.use(express.urlencoded({extended: false}))
     
